@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Upgrade minimal Ansible support to 4.0.0
 ## 20210413.1.0 - 2021-04-13
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
