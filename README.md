@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-rhel/master)](https://gitlab.com/alvistack/docker-rhel/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/docker-rhel.svg)](https://github.com/alvistack/docker-rhel/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-rhel.svg)](https://github.com/alvistack/docker-rhel/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-rhel.svg)](https://github.com/alvistack/docker-rhel/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/rhel-8.svg)](https://hub.docker.com/r/alvistack/rhel-8)
 
@@ -65,7 +65,7 @@ Now you could SSH to it as normal:
 
 ### `YYYYMMDD.Y.Z`
 
-Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-rhel/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-rhel/tags) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
 ### `YYYYMMDD.0.0`
 
