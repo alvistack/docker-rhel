@@ -13,7 +13,7 @@
         "CMD [\"/usr/sbin/sshd\", \"-eD\"]"
       ],
       "commit": true,
-      "image": "registry.access.redhat.com/ubi7",
+      "image": "registry.access.redhat.com/ubi7/ubi",
       "privileged": true,
       "type": "docker"
     }
