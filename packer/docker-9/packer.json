@@ -14,7 +14,7 @@
         "CMD [\"/usr/sbin/sshd\", \"-eD\"]"
       ],
       "commit": true,
-      "image": "registry.access.redhat.com/ubi8/ubi",
+      "image": "registry.access.redhat.com/ubi9-beta/ubi",
       "privileged": true,
       "run_command": [
         "-d",
@@ -51,7 +51,7 @@
         "subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "yum makecache",
         "yum update -y",
-        "yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils"
+        "yum install -y --allowerasing ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils"
       ],
       "type": "shell"
     },

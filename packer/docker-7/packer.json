@@ -2,10 +2,11 @@
   "builders": [
     {
       "changes": [
-        "ENV LANG en_US.UTF-8",
-        "ENV LC_ALL en_US.UTF-8",
-        "ENV SHELL /bin/bash",
-        "ENV TZ UTC",
+        "ENV LANG=en_US.UTF-8",
+        "ENV LC_ALL=en_US.UTF-8",
+        "ENV SHELL=/bin/bash",
+        "ENV TZ=UTC",
+        "ENV SMDEV_CONTAINER_OFF=True",
         "VOLUME /root",
         "WORKDIR /root",
         "EXPOSE 22",
@@ -15,6 +16,16 @@
       "commit": true,
       "image": "registry.access.redhat.com/ubi7/ubi",
       "privileged": true,
+      "run_command": [
+        "-d",
+        "-i",
+        "-t",
+        "--entrypoint=/bin/sh",
+        "--env",
+        "SMDEV_CONTAINER_OFF=True",
+        "--",
+        "{{.Image}}"
+      ],
       "type": "docker"
     }
   ],
@@ -31,11 +42,16 @@
   ],
   "provisioners": [
     {
+      "environment_vars": [
+        "REDHAT_USERNAME={{user `REDHAT_USERNAME`}}",
+        "REDHAT_PASSWORD={{user `REDHAT_PASSWORD`}}"
+      ],
       "inline": [
         "set -eu",
+        "subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "yum makecache",
         "yum update -y",
-        "yum install -y ca-certificates curl gcc glibc-common iproute python3 sudo yum-utils"
+        "yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils"
       ],
       "type": "shell"
     },
@@ -46,6 +62,9 @@
       "type": "ansible",
       "user": "root"
     }
-  ]
+  ],
+  "variables": {
+    "REDHAT_PASSWORD": "{{env `REDHAT_PASSWORD`}}",
+    "REDHAT_USERNAME": "{{env `REDHAT_USERNAME`}}"
+  }
 }
-

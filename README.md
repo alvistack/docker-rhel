@@ -13,6 +13,8 @@ Learn more about RHEL: <https://www.redhat.com/en/technologies/linux-platforms/e
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/rhel-9`](https://hub.docker.com/r/alvistack/rhel-9)
+      - [`packer/docker-9/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-9/packer.json)
   - [`alvistack/rhel-8`](https://hub.docker.com/r/alvistack/rhel-8)
       - [`packer/docker-8/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-8/packer.json)
   - [`alvistack/rhel-7`](https://hub.docker.com/r/alvistack/rhel-7)
