@@ -14,7 +14,7 @@
         "CMD [\"/usr/sbin/sshd\", \"-eD\"]"
       ],
       "commit": true,
-      "image": "registry.access.redhat.com/ubi9-beta/ubi",
+      "image": "registry.access.redhat.com/ubi9/ubi",
       "privileged": true,
       "run_command": [
         "-d",
