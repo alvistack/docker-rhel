@@ -15,7 +15,7 @@
 # limitations under the License.
 
 namespace: alvistack
-name: docker-rhel
+name: rhel
 description: Docker Image Packaging for RHEL
 
 version: 0.0.0
