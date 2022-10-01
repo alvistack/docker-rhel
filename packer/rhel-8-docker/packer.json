@@ -98,3 +98,4 @@
     "REDHAT_USERNAME": "{{env `REDHAT_USERNAME`}}"
   }
 }
+
