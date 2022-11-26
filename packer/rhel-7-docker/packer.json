@@ -48,6 +48,7 @@
       ],
       "inline": [
         "set -eu",
+        "sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "yum makecache",
         "yum update -y",
