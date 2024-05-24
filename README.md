@@ -23,12 +23,12 @@ Learn more about RHEL:
 
 ## Supported Tags and Respective Packer Template Links
 
--   [`alvistack/rhel-9`](https://hub.docker.com/r/alvistack/rhel-9)
-    -   [`packer/docker-9/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-9/packer.json)
--   [`alvistack/rhel-8`](https://hub.docker.com/r/alvistack/rhel-8)
-    -   [`packer/docker-8/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-8/packer.json)
--   [`alvistack/rhel-7`](https://hub.docker.com/r/alvistack/rhel-7)
-    -   [`packer/docker-7/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-7/packer.json)
+- [`alvistack/rhel-9`](https://hub.docker.com/r/alvistack/rhel-9)
+  - [`packer/docker-9/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-9/packer.json)
+- [`alvistack/rhel-8`](https://hub.docker.com/r/alvistack/rhel-8)
+  - [`packer/docker-8/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-8/packer.json)
+- [`alvistack/rhel-7`](https://hub.docker.com/r/alvistack/rhel-7)
+  - [`packer/docker-7/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-7/packer.json)
 
 ## Overview
 
@@ -38,11 +38,11 @@ running with RHEL.
 Based on [Official RHEL Docker
 Image](https://access.redhat.com/articles/4238681) with some minor hack:
 
--   Packaging by Packer Docker builder and Ansible provisioner in single
-    layer
--   Handle `ENTRYPOINT` with
-    [catatonit](https://github.com/openSUSE/catatonit)
--   Handle `CMD` with SSHD
+- Packaging by Packer Docker builder and Ansible provisioner in single
+  layer
+- Handle `ENTRYPOINT` with
+  [catatonit](https://github.com/openSUSE/catatonit)
+- Handle `CMD` with SSHD
 
 ### Quick Start
 
@@ -97,12 +97,12 @@ latest packages provided by the base image project.
 
 ## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY
+  4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
