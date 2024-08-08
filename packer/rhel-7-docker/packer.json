@@ -50,6 +50,7 @@
         "set -eu",
         "sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
+        "sed -i 's?dl.fedoraproject.org/pub/epel?archives.fedoraproject.org/pub/archive/epel?g' /etc/yum.repos.d/*.repo",
         "sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf || true",
         "yum makecache",
         "yum update -y",
