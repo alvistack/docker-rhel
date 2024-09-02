@@ -48,13 +48,14 @@
       ],
       "inline": [
         "set -eu",
+        "chmod o+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
         "sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "echo 'zchunk=False' >> /etc/dnf/dnf.conf",
         "yum makecache",
         "yum update -y",
         "yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
-        "yum install -y --allowerasing coreutils"
+        "yum install -y --allowerasing coreutils curl"
       ],
       "type": "shell"
     },
