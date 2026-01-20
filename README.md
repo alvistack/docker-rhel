@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-rhel.svg)](https://githu
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-rhel.svg)](https://github.com/alvistack/docker-rhel/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/rhel-8.svg)](https://hub.docker.com/r/alvistack/rhel-8)
+Pulls](https://img.shields.io/docker/pulls/alvistack/rhel-10.svg)](https://hub.docker.com/r/alvistack/rhel-10)
 
 Red Hat Enterprise Linux (often abbreviated to RHEL) is a Linux
 distribution developed by Red Hat for the commercial market. Red Hat
@@ -23,6 +23,8 @@ Learn more about RHEL:
 
 ## Supported Tags and Respective Packer Template Links
 
+- [`alvistack/rhel-10`](https://hub.docker.com/r/alvistack/rhel-10)
+  - [`packer/docker-9/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-9/packer.json)
 - [`alvistack/rhel-9`](https://hub.docker.com/r/alvistack/rhel-9)
   - [`packer/docker-9/packer.json`](https://github.com/alvistack/docker-rhel/blob/master/packer/docker-9/packer.json)
 - [`alvistack/rhel-8`](https://hub.docker.com/r/alvistack/rhel-8)
@@ -49,14 +51,14 @@ Image](https://access.redhat.com/articles/4238681) with some minor hack:
 Start SSHD:
 
     # Pull latest image
-    docker pull alvistack/rhel-8
+    docker pull alvistack/rhel-10
 
     # Run as detach
     docker run \
         -itd \
         --name rhel \
         --publish 2222:22 \
-        alvistack/rhel-8
+        alvistack/rhel-10
 
 **Success**. SSHD is now available on port `2222`.
 

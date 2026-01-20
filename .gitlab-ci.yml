@@ -134,6 +134,45 @@ default:
     - *script-git-submodule
     - *script-linters
 
+build:rhel-10-docker:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: $CI_PIPELINE_ID-rhel-10-docker
+    paths:
+      - packer/*/output-docker
+  variables:
+    _IMAGE: rhel-10
+    _PROVIDER: docker
+
+test:rhel-10-docker:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: $CI_PIPELINE_ID-rhel-10-docker
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: rhel-10
+    _PROVIDER: docker
+  needs:
+    - build:rhel-10-docker
+
+deploy:rhel-10-docker:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: $CI_PIPELINE_ID-rhel-10-docker
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: rhel-10
+    _PROVIDER: docker
+  needs:
+    - test:rhel-10-docker
+
 build:rhel-9-docker:
   <<: *job-packer-build
   stage: build
